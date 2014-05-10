@@ -1,0 +1,100 @@
+
+dws_getopt.cpp,59
+namespace DWS DWS47,1934
+int getopt(DWS::getopt52,2038
+
+dws_numerical.cpp,748
+namespace DWS{DWS32,1304
+    void SetMAXIT(DWS::SetMAXIT36,1379
+    REAL_TYPE gammln(DWS::gammln53,1996
+    REAL_TYPE gammp(DWS::gammp72,2505
+    REAL_TYPE gammq(DWS::gammq89,2880
+    REAL_TYPE betai(DWS::betai112,3367
+    REAL_TYPE erff(DWS::erff130,3895
+    void QuadraticT::Solve(DWS::QuadraticT::Solve140,4179
+    REAL_TYPE QuadraticT::DSolve(DWS::QuadraticT::DSolve147,4380
+    inline REAL_TYPE square(DWS::square159,4663
+    void gser(DWS::gser166,4863
+    void gcf(DWS::gcf202,5811
+    REAL_TYPE betacf(DWS::betacf234,6742
+    REAL_TYPE factrl(DWS::factrl276,7925
+    REAL_TYPE bico(DWS::bico296,8436
+    REAL_TYPE factln(DWS::factln304,8613
+    REAL_TYPE normal_probability(DWS::normal_probability316,9009
+
+dws_random.cpp,716
+namespace DWSDWS40,1939
+    void set_randomizer_seed(DWS::set_randomizer_seed65,2624
+    long randomize(DWS::randomize71,2730
+    inline REAL_TYPE raw_rand(DWS::raw_rand85,3015
+    void random_angle_sin_cos(DWS::random_angle_sin_cos94,3209
+    int random_bit(DWS::random_bit114,3842
+    int random_integer(DWS::random_integer139,4381
+    double random_real(DWS::random_real152,4607
+    bool random_chance(DWS::random_chance165,4820
+    REAL_TYPE exp_deviate(DWS::exp_deviate175,5131
+    REAL_TYPE normal_deviate(DWS::normal_deviate192,5446
+REAL_TYPE poission_deviate(DWS::poission_deviate201,5671
+    REAL_TYPE Ran1(252,7236
+    REAL_TYPE FastRand(300,8827
+    REAL_TYPE GaussDev(315,9336
+
+dws_fourier.h,184
+#define DWS_FOURIER_H58,2956
+typedef std::complex<double> complex_type;complex_type71,3158
+void fourier_transform(196,7982
+void fourier_transform(248,9766
+void _Fftstp(305,11726
+
+dws_fractal.h,30
+#define DWS_FRACTAl_H38,1939
+
+dws_getopt.h,29
+#define DWS_GETOPT_H29,1339
+
+dws_math.h,618
+    #define _DWS_MATH_H48,2418
+        template <class T> class TPosTPos94,3868
+            TPos(TPos97,3939
+            TPos(TPos98,3977
+        template <class T> class TLineTLine126,5031
+            TLine(TLine129,5103
+            TLine(TLine130,5145
+        template <class T> class TRangeTRange156,6172
+            TRange(TRange161,6287
+            TRange(TRange162,6331
+            template <class A> TRange(TRange163,6406
+            bool Empty(Empty164,6502
+            void Add(Add165,6558
+            void MakeEmpty(MakeEmpty174,6813
+            bool Singleton(Singleton175,6865
+
+dws_numerical.h,218
+    #define _DWS_NUMERICAL_H40,1949
+        typedef double REAL_TYPE;REAL_TYPE54,2189
+        struct QuadraticTQuadraticT100,4492
+            QuadraticT(QuadraticT103,4565
+            void Solve(Solve109,4758
+
+dws_random.h,119
+    #define DWS_RANDOM_H50,2544
+        class TIRand TIRand159,6197
+         inline int operator(operator161,6240
+
+dws_stlstats.h,540
+#define __DWS_STLSTATS_H38,1931
+inline T average(74,2972
+void series(95,3603
+void binomdst(118,4246
+        class Binomdst Binomdst121,4339
+                Binomdst(Binomdst::Binomdst126,4480
+                double operator()(Binomdst::operator()129,4619
+class SD SD148,5116
+  SD(SD::SD151,5149
+  T operator()(SD::operator()152,5177
+struct SimpleDistributionT SimpleDistributionT163,5505
+SimpleDistributionT simple_distribution(175,5861
+T _average(196,6523
+T _average(207,6916
+T _average(216,7313
+T _average(226,7658

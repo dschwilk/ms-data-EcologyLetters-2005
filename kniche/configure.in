@@ -1,0 +1,40 @@
+# Configure.in script for kniche project
+# Author: Dylan Schwilk
+# Version: $Revision: 1.4 $
+# Date: $Date: 2005/04/01 18:42:48 $
+
+AC_INIT(configure.in)
+
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(kniche, 4.7)
+
+AC_LANG_CPLUSPLUS
+AC_PROG_CXX  
+AM_PROG_LIBTOOL
+
+# Checks for header files.
+AC_CHECK_HEADERS([math.h getopt.h])
+
+
+# Set compile flags:
+# Get flags from the environment
+CFLAGS="${CFLAGS}"
+# this macro is used to get the arguments supplied
+# to the configure scto the configure script (./configure --enable-debug)
+# Check if we have enable debug support.
+AC_MSG_CHECKING(whether to enable debugging)
+debug_default="yes"
+AC_ARG_ENABLE(debug, [  --enable-debug=[no/yes] turn on debugging
+                       [default=$debug_default]],, enable_debug=$debug_default)
+# Yes, shell scripts can be used
+if test "x$enable_debug" = "xyes"; then
+         CFLAGS="$CFLAGS -g -DDEBUG"
+         CXXFLAGS="$CFLAGS"
+AC_MSG_RESULT(yes)
+else
+CFLAGS="$CFLAGS -O3 -fomit-frame-pointer"
+CXXFLAGS="$CFLAGS"
+AC_MSG_RESULT(no)
+fi
+
+AC_OUTPUT(Makefile src/Makefile src/dws/Makefile doc/Makefile )

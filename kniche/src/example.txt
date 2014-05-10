@@ -1,0 +1,1 @@
+500	0.01	LinearGenerator_1_0 LinearGenerator_1_0	2500	1000	0.05 50

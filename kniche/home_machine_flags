@@ -1,0 +1,1 @@
+-O2 -g0 -march=athlon-xp -mcpu=athlon-xp -mmmx -m3dnow

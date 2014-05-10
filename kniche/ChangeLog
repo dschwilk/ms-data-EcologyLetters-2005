@@ -1,0 +1,176 @@
+===========================
+ Project Change Log: kniche
+===========================
+
+2005-02-25  schwilkd  <try@schwilk.org>
+
+	* README: Added information on optomized builds.
+
+	* src/TEnvironment.h: Edited comments for typos.
+
+	* src/TRun.cpp:
+	Fixed run output header (replaced 'cycles' with 'epochs').
+
+2005-02-24  schwilkd  <try@schwilk.org>
+
+	* configure.in: Added --enable-debug option.
+
+2005-02-23  schwilkd  <try@schwilk.org>
+
+	* src/main.cpp:
+	Added checks for system getopt.h to use that if available rather than
+	DWS::getopt.
+
+2005-02-22  schwilkd  <try@schwilk.org>
+
+	* src/TLandscape.cpp, src/TLandscape.h:
+	Added Repopulate() method to re-assign species to locations using the existing
+	mc.
+
+	* src/main.cpp:
+	Fixed problem with -m monotonic option.  Environment was not being re-ordered
+	because TRun.Initialize() was called after aming the environment monotonic.
+
+2005-02-17  schwilkd   <try@schwilk.org>
+	
+	* src/TSpeciesPool.cpp: Added comment headers and description.
+
+	* src/dws/dws_stlstats.h:
+	Added 'typename' to template average functions.  Not sure why this is
+	necessary, but g++ 3.4 balked.
+
+	* src/dws/dws_math.h: Fixed deleted char.
+
+2005-02-16  schwilkd  <try@schwilk.org>
+
+	* src/mainpage.h: Updated abstract.
+
+2005-02-15  schwilkd  <try@schwilk.org>
+
+	* src/TRun.h: Added GetLandscape function.
+
+	* src/main.cpp:
+	Changed -m implementation to use new TLandscape::MakeEnvMonotonic.
+
+	* src/TEnvGenerator.h, src/TEnvGenerator.cpp:
+	Removed MakeMonotonic method.  This ability was instead added to TEnvironment.
+
+	* src/TLandscape.h, src/TLandscape.cpp:
+	Added MakeEnvMonotonic method.  Eventually the TEnvironment class can
+	probably be removed and I can have TLandscape manage the environmental
+	array directly.
+
+	* src/TEnvironment.cpp, src/TEnvironment.h: Added MakeMonotonic method.
+
+2005-02-14  schwilkd  <try@schwilk.org>
+
+	* src/main.cpp: Made -m option work so that we can do paired testing.
+
+	* src/TRun.h, src/TRun.cpp:
+	Removed stability testing, changed i/o format slightly (removed
+	_cycles, added _epochs).
+
+	* src/TEnvGenerator.h, src/TEnvGenerator.cpp: Added GaussianGenerator.
+
+	* src/TEnvGenerator.cpp:
+	Added z-score normalization to fractal generator.
+
+2005-02-11  schwilkd  <try@schwilk.org>
+
+	* src/TRun.h:
+	Refactored: moved run initialization code into separate function from
+	Run().
+
+	* src/main.cpp: Implemented -m option.
+
+	* src/TRun.cpp:
+	Refactored: moved run initialization code into separate function from
+	Run().
+
+	* src/TLandscape.h, src/TLandscape.cpp, src/TEnvironment.cpp: 
+	Cleaned comments, added GNU header.
+
+	* src/TEnvGenerator.h: Added MakeMonotonic() method.
+
+2005-02-10  schwilkd  <try@schwilk.org>
+
+	* src/main.cpp: Added -m (monotonic) option.  But no implmentation yet.
+
+	* src/TEnvGenerator.h: Fixed typo in TFractalGenerator declaration.
+
+	* src/TOption.cpp, src/TOption.h: Added GNU comment header.
+
+	* src/TEnvGenerator.h:
+	Added description to TFractalGenerator constructor.
+
+2005-01-26  schwilkd  <try@schwilk.org>
+
+	* src/dws/dws_fractal.h: Edited comments.
+
+	* src/dws/dws_random.h:
+	Added Doxygen comments. Renamed functions to use lower_case naming
+	style to match all my other libraries.
+
+	* src/dws/dws_math.h:
+	modified code to meet ansi standards and compile on mingw, cygwin,
+	linux. Added Doxygen comments and removed non-templated math functions
+	to dws_numerical library (dws_numerical.h and dws_numerical.cpp).  The
+	dws_math library now consists only of the template header file
+	dws_math.h.  I also un-capitalized the utility functions (abs, etc) to
+	conform with my coding standards.
+
+	* src/dws/dws_getopt.cpp:
+	eliminated MFC dependencies.  I use it with mingw.
+
+	* src/dws/dws_numerical.cpp: Added GNU comment header.
+
+	* src/dws/dws_numerical.cpp:
+	I made some minor changes to remove dependency on dws_math template
+	library.  Now dws_math and dws_numerical are independent.
+
+
+============================================================================
+ Old ChangeLog (prior to RCS):
+	
+ Ver   Date       Action
+----- ------      -----------------------------------------------
+4.5   040706      Changed immigration rate usage (now once per 	    
+                    recruitment event).  Changed population history output
+	            (-p option) to use more succinct format to save space
+	            and time. Store all normal probability calls in a
+	            lookup table to sppedup simulation.  This makes a huge
+	            difference!
+		                                                            
+		                                                            
+4.4   040701      Removed fitness threshold . Wasn't being used	    
+                    so I tried to speed up the code.			    
+                    <TLandscape.cpp, TLandscape.h, TRun.cpp, TRun.h	    
+                    TRun.h, main.cpp>					    
+		                                                            
+4.0   030531      Eliminated dependency on boost library, split	    
+                    TEnvironment into a second class, TEnvGenerator,	    
+                    which produces the environmental function.		    
+                    TEnvironment is now a component of TLandscape	    
+                    and is a simple array.  TLandscapes can now be	    
+                    read to and from files.  Serialization is		    
+                    through operator>> and <<.  The Format()		    
+                    function now outputs to a stream for easy		    
+                    human-readable/spreadsheet pastable			    
+                    representation. <TLandscape.h, TLandscape.cpp,	    
+                    TEnvGenerator.cpp, TEnvGenerator.h>			    
+		                                                            
+3.0   030421      Speeded up recruitment by eliminating ability	    
+                    of simulation to use alternative parent selection and   
+                    competition algorithms.				    
+		                                                            
+2.3.1   030716      Added -s command line option.  Now random number	    
+                    seed can be set which should allow easier		    
+                    batch-spawning of kniche without problems of	    
+                    each instance starting with same 'random'		    
+                    sequence due to the clock. <main.cpp>		    
+		                                                            
+2.3.0   030415      Added population statistics -- distribution stats,	    
+                    overlap stats To TLandscape.			    
+		                                                            
+1.2.0   021109      Improved command line options			    
+                    Reads input runs now (cin or file).                     
