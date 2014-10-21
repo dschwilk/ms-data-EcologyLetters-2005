@@ -1,4 +1,3 @@
-#
 # Makefile for 'aniche'.
 #
 # Type 'make' or 'make aniche' to create the executable.
@@ -8,8 +7,8 @@
 CC = g++
 
 # build target specs
-CFLAGS = -g -Wall -DDEBUG 
-OUT_DIR = debug_build
+CFLAGS = -g -Wall 
+OUT_DIR = .
 LIBS = 
 
 # first target entry is the target invoked when typing 'make'

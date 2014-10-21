@@ -57,7 +57,7 @@ void PrintHelp();
 // Function: main
 // --------------
 int main(int argc, char *argv[])
-{  
+{
     if(!ProcessOptions(argc, argv)) std::exit(1);
     
     if(SEARCH_FOR_L) {
