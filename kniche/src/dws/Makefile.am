@@ -1,4 +1,4 @@
-INCLUDES = $(all_includes)
+AM_CPPFLAGS = $(all_includes)
 METASOURCES = AUTO
 lib_LIBRARIES =  libdws.a
 libdws_a_SOURCES = dws_getopt.cpp dws_numerical.cpp dws_random.cpp

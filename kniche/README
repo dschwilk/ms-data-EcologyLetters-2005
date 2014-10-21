@@ -1,6 +1,6 @@
 # Kniche README
 # ---------------
-# $Revision: 1.2 $
+# 
 #
 
 KNICHE
@@ -9,22 +9,18 @@ A model for exploring community assembly on environmental gradients
 
 Dylan W. Schwilk, 2003, 2004, 2005
 
-kniche is written in c++ and is known to compile correctly with gcc on
-windows (using the mingw port of gcc) and on Mandrake Linux 9.2 - 10.1.
-It should work on most unix flavors.
+kniche is written in c++ and is known to compile correctly with gcc on windows
+(using the mingw port of gcc) and it should work on most unix flavors.
 
-To build kniche, go to the top level directory, run "./configure";
-then "make all".  The kniche executable will be in the kniche
-subdirectory.  for command line options run "kniche -h".  For an
-example run, go to example subdirectory and type
+To build kniche, go to the top level directory (kniche), run "./configure";
+then "make all". The kniche executable will be in the src subdirectory. for
+command line options run "kniche -h". For an example run, go to src
+subdirectory and type
 
-"../kniche/kniche < example.txt"
+"./kniche < example.txt"
 
-For generic information on the configure build script see the file
-INSTALL.  The supplied configure script accepts the --enable-debug
-option which by default is set to 'yes'.  To build a fast optimezed
-version of kniche you may want to do something like:
+For generic information on the configure build script see the file INSTALL. The
+supplied configure script accepts the --enable-debug option which by default is
+set to 'yes'. To build a fast optimezed version of kniche you may want to do
+something like:
 
-CFLAGS="-march=athlon-xp" ./configure --enable-debug=no
-
-Which is how I build kniche on my athlon box.

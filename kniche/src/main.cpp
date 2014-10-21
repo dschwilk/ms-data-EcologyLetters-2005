@@ -25,7 +25,7 @@
 #if defined(HAVE_GETOPT_H)
   #include <getopt.h>
 #else
-  #include "dws_getopt.h"
+  #include "dws/dws_getopt.h"
 #endif
 
 #include "dws/dws_stlstats.h"
@@ -43,7 +43,7 @@
 
 static const char* PROGRAM = "kniche";
 //static const char* VERSION = "4.5 $Revision: 1.8 $ ";
-static const char* AUTHOR = "Dylan Schwilk (www.pricklysoft.org)";
+static const char* AUTHOR = "Dylan Schwilk";
 
 // Functions
 bool ProcessOptions(int argc, char *argv[]);

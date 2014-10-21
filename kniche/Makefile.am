@@ -1,11 +1,11 @@
 # Makefile for kniche project
 # Author: Dylan Schwilk
-# Version: $Revision: 1.2 $
-# Date: $Date: 2005/02/24 23:04:29 $
+# 2014-10-21
 
 # not a GNU package. You can remove this line, if
 # have all needed files, that a GNU package needs
-#AUTOMAKE_OPTIONS = foreign 1.4
+AUTOMAKE_OPTIONS = foreign
 
 bindir = bin
 SUBDIRS = src
+
