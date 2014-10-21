@@ -1,2 +1,0 @@
-100	0.1	ConFractalGenerator_0.2_1.0 ConFractalGenerator_0.8_1.0 2500 1000	0.05 50
-100	0.1	ConFractalGenerator_0.4_1.0 ConFractalGenerator_0.8_1.0 2500 1000	0.05 50

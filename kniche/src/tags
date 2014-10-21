@@ -1,215 +1,0 @@
-
-mainpage.h,0
-
-nichedefs.h,55
-#define NICHEDEFS_H4,41
-typedef int TLPos;TLPos7,63
-
-TChooseWeighted.h,270
-    #define _chooseWeighted_h40,1685
-        class TChooseWeightedTChooseWeighted53,2115
-            int Choose(Choose63,2523
-            typedef std::pair< int, double> weightT weightT66,2601
-            typedef std::vector< weightT > wVectorT;wVectorT67,2655
-
-TEnvGenerator.h,368
-#define _TEnvGenerator_h41,1759
-class TEnvGenerator TEnvGenerator56,2250
-    virtual double Generate(TEnvGenerator::Generate67,2505
-class TLinearGenerator TLinearGenerator88,3166
-    virtual double Generate(TLinearGenerator::Generate93,3324
-class TFractalGenerator TFractalGenerator115,4067
-    virtual double Generate(TFractalGenerator::Generate120,4221
-
-TEnvironment.h,175
-#define _TENVIRONMENT_H34,1519
-class TEnvironmentTEnvironment42,1615
-    int Size(TEnvironment::Size52,1865
-    double EnvironmentAt(TEnvironment::EnvironmentAt58,2008
-
-TLandscape.h,298
-#define _landscape_h62,2895
-struct TLStats TLStats74,3149
-struct TLongLStatsTLongLStats80,3234
-    TLongLStats(TLongLStats91,3443
- class TLandscapeTLandscape105,3935
-        TLPos Size(TLandscape::Size112,4126
-        double DistributionOverlap(TLandscape::DistributionOverlap140,5148
-
-TOption.h,101
-#define _TOption_h31,1297
-class TOption TOption48,1616
-    void SetName(TOption::SetName54,1723
-
-TPlant.h,465
-    #define _plant_h39,1581
-class TTraitTTrait54,2081
-    double Test(TTrait::Test60,2174
-    class TPlantTPlant84,3049
-        void SetTrait(TPlant::SetTrait93,3338
-        TTrait GetTrait(TPlant::GetTrait94,3427
-        int Species(TPlant::Species95,3520
-        void SetSpecies(TPlant::SetSpecies96,3599
-        void Kill(TPlant::Kill97,3677
-        bool IsDead(TPlant::IsDead98,3736
-        double CheckFitness(TPlant::CheckFitness106,4006
-
-TPlantVector.h,331
-#define _TPLANTVECTOR_H5,44
-typedef std::vector<TPlant> TPlantVector;TPlantVector11,109
-std::ostream& operator<<(std::ostream& os,13,152
-std::ostream& operator<<(std::ostream& os, const TPlantVector& v)13,152
-std::istream& operator>>(std::istream& is,14,219
-std::istream& operator>>(std::istream& is, TPlantVector& v)14,219
-
-TPopGenerator.h,75
-#define TPOPGENERATOR_H19,1051
-class TPopGenerator TPopGenerator27,1136
-
-TPopulation.h,107
-#define _TPOPULATION_H24,947
-class TPopulationTPopulation42,1451
-    unsigned N(TPopulation::N49,1565
-
-TRun.h,48
-#define _TRun_h35,1489
-class TRunTRun49,1807
-
-TSpeciesPool.h,171
-#define _species_pool_h21,896
-class TSpeciesPoolTSpeciesPool36,1422
-  int Size(TSpeciesPool::Size45,1629
-  const TPlant& GetSpecies(TSpeciesPool::GetSpecies47,1692
-
-main.cpp,376
-static const char* PROGRAM 44,1711
-static const char* VERSION 45,1750
-static const char* AUTHOR 46,1804
-static char PopHistoryOut[55,2090
-static char LandscapeOut[56,2129
-static char Input[57,2167
-static unsigned NReps 58,2198
-static long RSeed 59,2225
-bool Monotonic 60,2248
-int main(64,2309
-void Run(89,3022
-bool ProcessOptions(114,3704
-void PrintHelp(161,4972
-
-TChooseWeighted.cpp,566
-namespace DWS{DWS44,1749
-    TChooseWeighted::TChooseWeighted(DWS::TChooseWeighted::TChooseWeighted49,1947
-    TChooseWeighted::~TChooseWeighted(DWS::TChooseWeighted::~TChooseWeighted53,2021
-    TChooseWeighted::TChooseWeighted(DWS::TChooseWeighted::TChooseWeighted56,2077
-    void TChooseWeighted::Reset(DWS::TChooseWeighted::Reset63,2207
-    void TChooseWeighted::Reset(DWS::TChooseWeighted::Reset70,2351
-    void TChooseWeighted::AddChoice(DWS::TChooseWeighted::AddChoice78,2541
-    int TChooseWeighted::Choose(DWS::TChooseWeighted::Choose85,2704
-
-TEnvGenerator.cpp,482
-TEnvGenerator::TEnvGenerator(41,1809
-TEnvGenerator::TEnvGenerator(45,1870
-TEnvGenerator::~TEnvGenerator(49,1932
-double TEnvGenerator::Generate(52,1998
-TLinearGenerator::TLinearGenerator(62,2258
-TLinearGenerator::~TLinearGenerator(73,2542
-double TLinearGenerator::Generate(78,2699
-TFractalGenerator::TFractalGenerator(88,2995
-TFractalGenerator::~TFractalGenerator(117,3991
-double TFractalGenerator::Generate(121,4078
-TEnvGenerator* TEnvGenerator::GetEnvGenerator(130,4262
-
-TEnvironment.cpp,377
-TEnvironment::TEnvironment(38,1513
-TEnvironment::TEnvironment(42,1567
-TEnvironment::TEnvironment(48,1671
-TEnvironment::TEnvironment(54,1811
-TEnvironment::~TEnvironment(61,1973
-TEnvironment& TEnvironment::operator=(66,2021
-double TEnvironment::EnvironmentAt(77,2200
-void TEnvironment::Generate(83,2278
-std::ostream& operator<<(90,2418
-std::istream& operator>>(97,2605
-
-TLandscape.cpp,720
-TLandscape::TLandscape(59,2019
-TLandscape::~TLandscape(68,2236
-void TLandscape::Populate(71,2266
-void TLandscape::GenerateEnvironment(81,2511
-TLPos TLandscape::Size(86,2595
-int TLandscape::PlantAt(92,2676
-unsigned TLandscape::GetPopulations(103,2851
-TLStats TLandscape::GetShortStats(126,3264
-TLongLStats TLandscape::GetLongStats(141,3604
-bool TLandscape::RunFor(181,4762
-void TLandscape::MakeSeeds(199,5226
-void TLandscape::Recruit(236,6582
-double TLandscape::DistributionOverlap(253,7063
-double TLandscape::LevinsOverlap(270,7451
-void TLandscape::Format(305,8395
-std::ostream& operator<<(321,8815
-std::istream& operator>>(328,8989
-std::ostream& operator<<(339,9162
-std::istream& operator>>(346,9338
-
-TOption.cpp,131
-TOption::TOption(35,1444
-TOption::~TOption(40,1500
-std::string TOption::TOption::Name(43,1524
-std::ostream& operator<<(49,1585
-
-TPlant.cpp,498
-TTrait::TTrait(45,1675
-TTrait::TTrait(49,1729
-double TTrait::Test(56,1839
-std::ostream& operator<<(64,2062
-std::istream& operator>>(70,2212
-TPlant::TPlant(83,2513
-TPlant::TPlant(87,2574
-TPlant::TPlant(99,2862
-TPlant::~TPlant(105,2982
-TPlant& TPlant::operator=(118,3226
-double TPlant::CheckFitness(133,3663
-double TPlant::CheckFitness(140,3893
-double TPlant::CheckSeeds(146,4056
-std::ostream& operator<<(153,4277
-std::istream& operator>>(160,4463
-double TPlant::GetMutation(176,4869
-
-TPlantVector.cpp,64
-std::ostream& operator<<(7,50
-std::istream& operator>>(14,223
-
-TPopGenerator.cpp,0
-
-TPopulation.cpp,260
-TPopulation::TPopulation(17,464
-TPopulation::~TPopulation(18,493
-void TPopulation::AddLocation(20,524
-unsigned TPopulation::N(24,599
-DWS::SimpleDistributionT TPopulation::Distribution(30,668
-DWS::SimpleDistributionT TPopulation::NicheDistribution(35,818
-
-TRun.cpp,296
-TRun::TRun(75,3000
-TRun::TRun(85,3181
-TRun::~TRun(103,3728
-void TRun::Run(112,3825
-bool TRun::IsStable(185,6086
-void TRun::UpdateDiversities(199,6556
-void TRun::WriteHeader(214,7028
-std::ostream& operator<<(220,7197
-std::istream& operator>>(229,7539
-void TRun::MakePlantVector(250,8232
-
-TSpeciesPool.cpp,394
-TSpeciesPool::TSpeciesPool(26,1547
-TSpeciesPool::TSpeciesPool(29,1580
-TSpeciesPool::TSpeciesPool(47,2168
-TSpeciesPool::~TSpeciesPool(54,2336
-int TSpeciesPool::RandomPlant(57,2370
-void TSpeciesPool::CreateLookupTables(64,2519
-double TSpeciesPool::SpeciesFitness(95,3287
-double TSpeciesPool::SpeciesDispersal(100,3380
-std::ostream& operator<<(110,3667
-std::istream& operator>>(128,4035

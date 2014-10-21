@@ -1,14 +1,20 @@
+# autotools
+/ar-lib
+/compile
+/depcomp
+/missing
+/Makefile
+/Makefile.in
+/aclocal.m4
 /autom4te.cache/
-*~
-*.html
-*.log
+/config.*
+/configure
+/m4/
+/stamp-h?
+.deps/
+.dirstamp
 *.o
-*.la
-*.so*
+*~
+# libs
 *.a
-.deps
-*.tar*
-*.zip
-*.lo
-*.gcno
-*.gcda
+*.log

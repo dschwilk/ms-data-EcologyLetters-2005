@@ -21,6 +21,5 @@ subdirectory and type
 
 For generic information on the configure build script see the file INSTALL. The
 supplied configure script accepts the --enable-debug option which by default is
-set to 'yes'. To build a fast optimezed version of kniche you may want to do
-something like:
+set to 'yes'. 
 
