@@ -42,7 +42,6 @@
 // Constants
 
 static const char* PROGRAM = "kniche";
-//static const char* VERSION = "4.5 $Revision: 1.8 $ ";
 static const char* AUTHOR = "Dylan Schwilk";
 
 // Functions

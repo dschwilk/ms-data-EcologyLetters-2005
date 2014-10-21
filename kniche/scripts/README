@@ -1,7 +1,0 @@
-This directory contains two python scripts:
-
-gen.py -> a script for generating kniche input files for looping
-through parameters
-
-restimes.py -> a script for parsing kniche pop file outputs and
-producing a list of residence times.

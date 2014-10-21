@@ -5,12 +5,12 @@
 # script to generate input files for kniche
 # For use with kniche v4.5
 
-import string
+#import string
 
 #NB = (0.01, 0.02, 0.03, .05, 0.7, 0.1)
 #DB = (10,20,30,50,70,100)
-DB=(50,)
-# in landscape units, enter as if for lsize=1000, this will be normalized below under some versions
+DB=(50,) # in landscape units, enter as if for lsize=1000, this will be normalized below
+# under some versions
 
 NB = (0.05,)
 # in env units

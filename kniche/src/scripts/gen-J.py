@@ -5,7 +5,7 @@
 # script to generate input files for kniche
 # v4 for use with kniche v4.2
 
-import string
+#import string
 
 #NB = (0.01, 0.02, 0.03, .05, 0.7, 0.1)
 #DB = (10,20,30,50,70,100)
@@ -15,7 +15,7 @@ DB=(50,)
 NB = (0.05,)
 # in env units
 IM = (1.0e-4,)
-THRESH = 0.0
+#THRESH = 0.0
 Stable_cycles = 5
 
 J = (101,201,501, 1001,1501,2001,2501)
@@ -32,7 +32,7 @@ for j in J :
                                 norm_db = db * j / 1000.0
                                 EGen = "LinearGenerator_%f_%f" % (e , 0) 
                                 MCGen = EGen  # Local and global environments the same
-                                print "%d\t%f\t%f\t%s\t%s\t%d\t%d\t%f\t%f" % (j,THRESH,im,EGen, MCGen,sp,Stable_cycles,nb,norm_db)
+                                print "%d\t%f\t%s\t%s\t%d\t%d\t%f\t%f" % (j,im,EGen, MCGen,sp,Stable_cycles,nb,norm_db)
 
 
 # gen.py
