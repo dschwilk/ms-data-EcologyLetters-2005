@@ -2,7 +2,7 @@
  Project Change Log: kniche
 ===========================
 
-2005-02-25  schwilkd  <try@schwilk.org>
+2005-02-25  schwilkd  <dylan@schwilk.org>
 
 	* README: Added information on optomized builds.
 
@@ -11,17 +11,17 @@
 	* src/TRun.cpp:
 	Fixed run output header (replaced 'cycles' with 'epochs').
 
-2005-02-24  schwilkd  <try@schwilk.org>
+2005-02-24  schwilkd  <dylan@schwilk.org>
 
 	* configure.in: Added --enable-debug option.
 
-2005-02-23  schwilkd  <try@schwilk.org>
+2005-02-23  schwilkd  <dylan@schwilk.org>
 
 	* src/main.cpp:
 	Added checks for system getopt.h to use that if available rather than
 	DWS::getopt.
 
-2005-02-22  schwilkd  <try@schwilk.org>
+2005-02-22  schwilkd  <dylan@schwilk.org>
 
 	* src/TLandscape.cpp, src/TLandscape.h:
 	Added Repopulate() method to re-assign species to locations using the existing
@@ -31,8 +31,8 @@
 	Fixed problem with -m monotonic option.  Environment was not being re-ordered
 	because TRun.Initialize() was called after aming the environment monotonic.
 
-2005-02-17  schwilkd   <try@schwilk.org>
-	
+2005-02-17  schwilkd   <dylan@schwilk.org>
+
 	* src/TSpeciesPool.cpp: Added comment headers and description.
 
 	* src/dws/dws_stlstats.h:
@@ -41,11 +41,11 @@
 
 	* src/dws/dws_math.h: Fixed deleted char.
 
-2005-02-16  schwilkd  <try@schwilk.org>
+2005-02-16  schwilkd  <dylan@schwilk.org>
 
 	* src/mainpage.h: Updated abstract.
 
-2005-02-15  schwilkd  <try@schwilk.org>
+2005-02-15  schwilkd  <dylan@schwilk.org>
 
 	* src/TRun.h: Added GetLandscape function.
 
@@ -62,7 +62,7 @@
 
 	* src/TEnvironment.cpp, src/TEnvironment.h: Added MakeMonotonic method.
 
-2005-02-14  schwilkd  <try@schwilk.org>
+2005-02-14  schwilkd  <dylan@schwilk.org>
 
 	* src/main.cpp: Made -m option work so that we can do paired testing.
 
@@ -75,7 +75,7 @@
 	* src/TEnvGenerator.cpp:
 	Added z-score normalization to fractal generator.
 
-2005-02-11  schwilkd  <try@schwilk.org>
+2005-02-11  schwilkd  <dylan@schwilk.org>
 
 	* src/TRun.h:
 	Refactored: moved run initialization code into separate function from
@@ -87,12 +87,12 @@
 	Refactored: moved run initialization code into separate function from
 	Run().
 
-	* src/TLandscape.h, src/TLandscape.cpp, src/TEnvironment.cpp: 
+	* src/TLandscape.h, src/TLandscape.cpp, src/TEnvironment.cpp:
 	Cleaned comments, added GNU header.
 
 	* src/TEnvGenerator.h: Added MakeMonotonic() method.
 
-2005-02-10  schwilkd  <try@schwilk.org>
+2005-02-10  schwilkd  <dylan@schwilk.org>
 
 	* src/main.cpp: Added -m (monotonic) option.  But no implmentation yet.
 
@@ -103,7 +103,7 @@
 	* src/TEnvGenerator.h:
 	Added description to TFractalGenerator constructor.
 
-2005-01-26  schwilkd  <try@schwilk.org>
+2005-01-26  schwilkd  <dylan@schwilk.org>
 
 	* src/dws/dws_fractal.h: Edited comments.
 
@@ -131,46 +131,46 @@
 
 ============================================================================
  Old ChangeLog (prior to RCS):
-	
+
  Ver   Date       Action
 ----- ------      -----------------------------------------------
-4.5   040706      Changed immigration rate usage (now once per 	    
+4.5   040706      Changed immigration rate usage (now once per
                     recruitment event).  Changed population history output
 	            (-p option) to use more succinct format to save space
 	            and time. Store all normal probability calls in a
 	            lookup table to sppedup simulation.  This makes a huge
 	            difference!
-		                                                            
-		                                                            
-4.4   040701      Removed fitness threshold . Wasn't being used	    
-                    so I tried to speed up the code.			    
-                    <TLandscape.cpp, TLandscape.h, TRun.cpp, TRun.h	    
-                    TRun.h, main.cpp>					    
-		                                                            
-4.0   030531      Eliminated dependency on boost library, split	    
-                    TEnvironment into a second class, TEnvGenerator,	    
-                    which produces the environmental function.		    
-                    TEnvironment is now a component of TLandscape	    
-                    and is a simple array.  TLandscapes can now be	    
-                    read to and from files.  Serialization is		    
-                    through operator>> and <<.  The Format()		    
-                    function now outputs to a stream for easy		    
-                    human-readable/spreadsheet pastable			    
-                    representation. <TLandscape.h, TLandscape.cpp,	    
-                    TEnvGenerator.cpp, TEnvGenerator.h>			    
-		                                                            
-3.0   030421      Speeded up recruitment by eliminating ability	    
-                    of simulation to use alternative parent selection and   
-                    competition algorithms.				    
-		                                                            
-2.3.1   030716      Added -s command line option.  Now random number	    
-                    seed can be set which should allow easier		    
-                    batch-spawning of kniche without problems of	    
-                    each instance starting with same 'random'		    
-                    sequence due to the clock. <main.cpp>		    
-		                                                            
-2.3.0   030415      Added population statistics -- distribution stats,	    
-                    overlap stats To TLandscape.			    
-		                                                            
-1.2.0   021109      Improved command line options			    
-                    Reads input runs now (cin or file).                     
+
+
+4.4   040701      Removed fitness threshold . Wasn't being used
+                    so I tried to speed up the code.
+                    <TLandscape.cpp, TLandscape.h, TRun.cpp, TRun.h
+                    TRun.h, main.cpp>
+
+4.0   030531      Eliminated dependency on boost library, split
+                    TEnvironment into a second class, TEnvGenerator,
+                    which produces the environmental function.
+                    TEnvironment is now a component of TLandscape
+                    and is a simple array.  TLandscapes can now be
+                    read to and from files.  Serialization is
+                    through operator>> and <<.  The Format()
+                    function now outputs to a stream for easy
+                    human-readable/spreadsheet pastable
+                    representation. <TLandscape.h, TLandscape.cpp,
+                    TEnvGenerator.cpp, TEnvGenerator.h>
+
+3.0   030421      Speeded up recruitment by eliminating ability
+                    of simulation to use alternative parent selection and
+                    competition algorithms.
+
+2.3.1   030716      Added -s command line option.  Now random number
+                    seed can be set which should allow easier
+                    batch-spawning of kniche without problems of
+                    each instance starting with same 'random'
+                    sequence due to the clock. <main.cpp>
+
+2.3.0   030415      Added population statistics -- distribution stats,
+                    overlap stats To TLandscape.
+
+1.2.0   021109      Improved command line options
+                    Reads input runs now (cin or file).
